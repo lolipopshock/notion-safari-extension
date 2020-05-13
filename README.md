@@ -41,7 +41,7 @@ The functionality in `lib/processor.Paper` supports automatic parsing of arxiv l
         "Paper": "https://notion.so/xxx/xxxx"
     }
     ```
-3. On an arxiv page, use click the `safari2notion` service to add the paper to your Notion page. 
+3. On an arxiv page, click the `safari2notion` service to add the paper to your Notion page. 
     ![arxiv-example](images/arxiv-example.png)
 
 ## Read More
