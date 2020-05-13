@@ -21,6 +21,7 @@ Build your own Notion Safari Extension and make it even better!
 
 4. Open the `automator` App on your Mac and create a new file (Command + N). Follow the instruction shown below to create a mac `Quick Action` and add the `automator_script.js` code to it. 
     ![create-automation](images/create-automation.png)
+    Note: The `automator_script.js` only saves the current tab, while the `automator_script_batch.js` saves all the tabs in the front window. You can choose the script to paste based on your need, but please remember to change the path to notion configuration in the file. 
 
 5. Bind the automation with the python script `safari2notion.py` using the code `/path/to/your/python ~/path/to/safari2notion.py "$@"`, and save the automation as `safari2notion`. Then you can find it in the Service menu in Safari. 
     ![save-automation](images/save-automation.png)
