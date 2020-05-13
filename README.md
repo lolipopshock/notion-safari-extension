@@ -33,7 +33,15 @@ Congratulations! You've finished the configuration. You can further customize th
 
 The functionality in `lib/processor.Paper` supports automatic parsing of arxiv links. You can easily use that to generate and store a paper's meta information based on its arxiv paper link. 
 
-![arxiv-example](images/arxiv-example.png)
+1. Creating a Notion page as database, and add the `Authors` and `URL` column (case sensitive). 
+2. Add the page-link and and name `Paper` to the `"pages"` object in your notion configuration file:
+    ```
+    "pages": {
+        "Paper": "https://notion.so/xxx/xxxx"
+    }
+    ```
+3. On an arxiv page, use click the `safari2notion` service to add the paper to your Notion page. 
+    ![arxiv-example](images/arxiv-example.png)
 
 ## Read More
 
