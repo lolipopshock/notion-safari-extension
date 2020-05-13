@@ -39,10 +39,11 @@ function run(input, parameters) {
     urlVals = ["--urls"]
     var Safari = Application('Safari');
     Safari.includeStandardAdditions = true;
-    
-    var tab = Safari.windows[0].currentTab() 
-	urlVals.push(tab.url())
-    titleVals.push(tab.name())
+    Safari.windows[0].tabs().forEach(function (tab) {
+        // console.log(tab.url())
+        urlVals.push(tab.url())
+        titleVals.push(tab.name())
+    })
 
     // Return the values 
     returnVals = returnVals.concat(titleVals).concat(urlVals)
