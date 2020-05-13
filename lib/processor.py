@@ -78,7 +78,6 @@ class Paper(BaseProcessor):
         row.set_property("name", paper_info['title'])
         row.set_property("Authors", paper_info['authors'])
         row.set_property("URL", paper_info['url'])
-        row.set_property("Paper Name", paper_info['title'])
         
         if enable_template_page:
             self.template_page(row)

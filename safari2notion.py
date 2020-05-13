@@ -42,9 +42,7 @@ if __name__ == "__main__":
     
     if page_selection == 'Paper':
         iterate_items(page_urls, page_titles, page, Paper)
-    elif page_selection == 'Articles':
+    elif is_notion_database(_url):
         iterate_items(page_urls, page_titles, page, Article)
-    elif page_selection == 'Code':
-        iterate_items(page_urls, page_titles, page, Bookmark)
     else:
         iterate_items(page_urls, page_titles, page, Bookmark)
