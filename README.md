@@ -10,7 +10,7 @@ Build your own Notion Safari Extension and make it even better!
     ```
 2. Create your own notion configuration file:
     
-    1. Fetch the Notion token from your browser. After opening the inspector panel (Command+Shift+C) in Chrome, follow the instructions shown in the figure below.
+    1. Fetch the Notion token from your browser. Firstly log into your Notion account in Chrome. On [your Notion page](Notion.so), open the inspector panel using Command+Shift+C, follow the instructions shown in the figure below.
         ![get-token](images/get-token.png)
 
     2. Fill in the token and page name/link in the notion configuration file based on the [template](https://github.com/lolipopshock/notion-safari-extension/blob/master/notion-config-example.json). 
@@ -44,4 +44,3 @@ The functionality in `lib/processor.Paper` supports automatic parsing of arxiv l
 - [md2notion: A better Notion.so Markdown importer](https://github.com/Cobertos/md2notion)
 - [Newspaper3k: Article scraping & curation](https://github.com/codelucas/newspaper#newspaper3k-article-scraping--curation)
 - [arxiv.py: Python wrapper for the arXiv API](https://github.com/lukasschwab/arxiv.py)
-
