@@ -14,8 +14,10 @@ Build your own Notion Safari Extension and make it even better!
         ![get-token](images/get-token.png)
 
     2. Fill in the token and page name/link in the notion configuration file based on the [template](https://github.com/lolipopshock/notion-safari-extension/blob/master/notion-config-example.json). 
+        - For `<page-link>`, it's link to the given Notion page, e.g., https://www.notion.so/xxx/xxxx. It can be a regular page or database.
+        - For `<page-name>`, it doesn't need to the same as the page name in Notion. 
 
-3. Add the **absolute path** to the notion configuration file to the `automator_script.js` and `safari2notion.py` file. 
+3. Add the **absolute path** of the notion configuration file to the `automator_script.js` (line 11) and `safari2notion.py` (line 17) file. 
 
 4. Follow the instruction shown below to create a mac `Quick Action` and add the `automator_script.js` code to it. 
     ![create-automation](images/create-automation.png)

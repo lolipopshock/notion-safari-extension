@@ -1,8 +1,7 @@
 {
     "token": "<your-notion-token>",
     "pages": {
-        "Paper": "<page-link>",
-        "Misc": "<page-link>",
-        "Articles": "<page-link>"
+        "<page-name1>": "<page-link2>",
+        "<page-name2>": "<page-link2>"
     }
 }
