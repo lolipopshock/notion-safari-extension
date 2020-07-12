@@ -20,7 +20,10 @@ def iterate_items(page_urls, page_titles, page, Processor):
 
     for page_url, page_title in zip(page_urls, page_titles): 
         proc = Processor(page_url, page_title)
-        proc.add_to_notion(page)
+        row = proc.add_to_notion(page)
+        if proc.name == 'Paper':
+            proc.download_paper(os.path.expanduser('~/Downloads/'))
+            proc.upload_thumbnail(client, row)
         
 def create_notion_page(url):
     if is_notion_database(url):
@@ -29,9 +32,10 @@ def create_notion_page(url):
         page = client.get_block(url)
     return page
 
+conf = load_json_record(CONFIG_PATH)
+client = NotionClient(token_v2=conf['token'])
+    
 if __name__ == "__main__":
-    conf = load_json_record(CONFIG_PATH)
-    client = NotionClient(token_v2=conf['token'])
     
     page_selection = args.page_selection
     page_urls = args.urls
@@ -46,3 +50,5 @@ if __name__ == "__main__":
         iterate_items(page_urls, page_titles, page, Article)
     else:
         iterate_items(page_urls, page_titles, page, Bookmark)
+    
+    client.session.close()
